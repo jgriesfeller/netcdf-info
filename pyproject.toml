@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netcdf_info"
+version = "0.0.1"
+description = "small project for some quick netcdf info"
+authors = [
+    { name = "Jan Griesfeller", email = "jan.griesfeller@met.no" }
+]
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+dependencies = []
+license = { text = "GPL 3.0" }
+
+[project.urls]
+homepage = "https://github.com/metno/aerocom_user_management"
+repository = "https://github.com/metno/aerocom_user_management"
+
+[project.scripts]
+netcdf_info = "netcdf_info.cli.netcdf_info:main"
+#aumn_import_users = "aerocom_user_management.cli.aumn_import_users:main"
+
+[tool.setuptools]
+packages = ["netcdf_info", "netcdf_info.cli"]
+package-dir = {"" = "src"}
+
+#[tool.setuptools.packages.find]
+#where = ["src"]
+
+#[tool.setuptools.package-data]
+#aerocom_user_management = ["*.yml",]
+#
+#[tool.pytest.ini_options]
+#minversion = "6.0"
+#addopts = "-ra -q"
+#testpaths = ["tests"]
+#
+#[tool.black]
+#line-length = 88
+#target-version = ['py311', 'py312', 'py313']
+#
+#[tool.isort]
+#profile = "black"
